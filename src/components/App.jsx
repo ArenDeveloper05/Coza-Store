@@ -1,3 +1,4 @@
+import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 // Import Elements for set route.
 import HomePage from "../pages/homePage/HomePage";
