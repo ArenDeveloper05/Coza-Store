@@ -1,7 +1,11 @@
 .product-items {
     padding: 18px;
-    border: solid red;
+        display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     &-item {
+        margin: 14px;
         width: 320px;
         padding: 4px;
         &-image {
@@ -25,7 +29,7 @@
             }
             &:hover button {
                 bottom: 8%;
-                transition: all cubic-bezier(.17,.67,.83,.67);
+                transition: all .8s;
             }
         }
         &-info {
