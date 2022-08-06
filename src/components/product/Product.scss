@@ -1,0 +1,18 @@
+.product {
+    border: solid;
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    &-title {
+        text-transform: uppercase;
+    }
+    &-select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-second-side {
+            display: flex;
+            padding: 8px;
+        }
+    }
+}
