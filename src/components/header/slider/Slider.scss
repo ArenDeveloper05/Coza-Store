@@ -8,7 +8,9 @@
         width: 100%;
         animation: slider-window 1s linear;
         animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-
+            .left-pos {
+                left: 18%;
+            }
             img{
                 width: 100%;
                 
@@ -30,18 +32,15 @@
             .women-collection{
                 position: absolute;
                 top: 50%;
-                left: 9%;
                 font-size: 40px;
                 animation: women-collection 1s linear;
                 animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-               
             }
             .new-arrivals{
                 font-size: 70px;
                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 position: absolute;
                 top: 60%;
-                left: 8%;
                 transform: rotate(0deg);
                 transform-origin: right;
                 animation: slider-title-arrivals  1s  linear ;
@@ -50,7 +49,6 @@
             .men-collection{
                 position: absolute;
                 top: 50%;
-                left: 9%;
                 font-size: 40px;
                 animation: men-collection 1s linear;
                 animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -58,7 +56,6 @@
             .shop-now-button-men{
                 position: absolute;
                 top: 80%;
-                left: 20%;
                 background-color: rgb(112, 33, 181);
                 width: 130px;
                 height: 40px;
@@ -78,19 +75,18 @@
             .men-new-season{
                 position: absolute;
                 top: 50%;
-                left: 9%;
                 font-size: 50px;
                 animation: men-new-season 1s linear;
                 animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); //es
                 font-family: "Macondo";
             }
-            .shop-now-button{
+            .base-button {
                 position: absolute;
                 top: 80%;
-                left: 20%;
-                background-color: rgb(112, 33, 181);
-                width: 130px;
-                height: 40px;
+                left: 18% !important;
+                background-color: #717fe0;
+                width: 161px;
+                height: 46px;
                 border-radius: 30px;
                 border: none;
                 color: white;
@@ -99,12 +95,10 @@
                 animation:shop-now-button 2s linear;
                 animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
                 cursor: pointer;
-                
             }
             .shop-now-button-women{
                 position: absolute;
                 top: 75%;
-                left: 15%;
                 background-color: rgb(112, 33, 181);
                 width: 130px;
                 height: 40px;

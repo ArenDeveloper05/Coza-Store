@@ -3,21 +3,15 @@ import './Nav.scss'
 import {AiOutlineSearch,AiOutlineHeart} from 'react-icons/ai'
 import {MdShoppingCart} from 'react-icons/md'
 
-
-
-
 const Nav = () => {
-
     const navRef = useRef(null);
     window.onscroll = ()=> {
-        if(window.scrollY > 47){
+        if(window.scrollY > 47) {
             navRef.current.style.boxShadow   = "2px 2px 10px 1px rgb(207 211 203 / 10%)";
             navRef.current.style.backgroundColor = "white";
             navRef.current.style.position = "fixed";
             navRef.current.style.top = "0";
-
-        }else{
-
+        } else{
             navRef.current.style.boxShadow = "none";
             navRef.current.style.backgroundColor = "transparent";
             navRef.current.style.position = "absolute";
@@ -58,9 +52,9 @@ const Nav = () => {
                     <li><a href="/Contact">Contact</a></li>
                 </ul>
                 <section className='nav-content-icons'>
-                    <AiOutlineSearch className="nav-content-icons-search "/>
-                    <MdShoppingCart className="nav-content-icons-shopping "/>
-                    <AiOutlineHeart className="nav-content-icons-like"/>
+                    <AiOutlineSearch className="nav-content-icons-search nav-content-icons-icon"/>
+                    <MdShoppingCart className="nav-content-icons-shopping nav-content-icons-icon"/>
+                    <AiOutlineHeart className="nav-content-icons-like nav-content-icons-icon"/>
                 </section>
             </div>
         </nav>

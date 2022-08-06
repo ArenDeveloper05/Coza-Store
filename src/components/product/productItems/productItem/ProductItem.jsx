@@ -1,7 +1,7 @@
 import { BsHeart } from "react-icons/bs"
 import { AiFillHeart } from "react-icons/ai"
 import { useState } from "react";
-import { BaseButton } from "../../../common/BaseButton/BaseButton";
+import BaseButton from "../../../common/BaseButton/BaseButton";
 
 const ProductItem = ({ item }) => {
   const [isOver, setIsOver] = useState(false);

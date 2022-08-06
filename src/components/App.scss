@@ -5,9 +5,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-main {
+.page-main {
     border: solid;
     min-height: 1600px;
-    padding: 3rem;
     background-color: #fff;
+    &-wrapper {
+        margin: auto;
+        width: 1600px;
+    }
 }

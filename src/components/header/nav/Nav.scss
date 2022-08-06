@@ -14,11 +14,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
         &-bar{
             width: max-content;
             display: flex;
-           
             div{
                 padding: 8px 25px;
                 border-left: 1px solid grey;
@@ -73,6 +71,10 @@
         &-icons{
             font-size: 30px;
             margin-left: auto;
+            &-icon {
+                font-size: 25px;
+                cursor: pointer;
+            }
             &-search{
                 margin-right: 25px;
                 transition: 0.4s;

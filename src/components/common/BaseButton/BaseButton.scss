@@ -10,4 +10,9 @@
     outline: none;
     font-weight: 600;
     font-size: 18px;
+    &:hover {
+        background-color: #000 !important;
+        color: #fff;
+        transition: all 0.4s;
+    }
 }

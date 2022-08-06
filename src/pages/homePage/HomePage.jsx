@@ -10,13 +10,13 @@ export const HomeContext = createContext();
 const HomePage = () => {
     return (
         <Layout>
-            <main className="page-main">
-                <Slider/>
-            </main>
            <HomeContext.Provider value={ { productCategoryData } }>
                 <main className="page-main">
-                    <ProductCategory />
-                    <Product title="PRODUCT OVERVIEW" />
+                    <Slider/>
+                    <div className="page-main-wrapper">
+                        <ProductCategory />
+                        <Product title="PRODUCT OVERVIEW" />
+                    </div>
                 </main>
            </HomeContext.Provider>
         </Layout>

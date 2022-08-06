@@ -3,19 +3,19 @@
     padding: 5rem;
     flex-direction: column;
     &-title {
-        text-transform: uppercase;
-        margin-left: 8.7%;
+        text-align: left;
+        margin-left: 3%;
     }
     &-select {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 2rem 0 2rem;
-        margin-left: 6.6%;
-        margin-right: 5.9%;
+        margin: auto;
+        min-width: 100%;
+        padding: 26px;
         &-second-side {
             display: flex;
-            padding: 8px;
+            padding: 10px;
         }
     }
 }
