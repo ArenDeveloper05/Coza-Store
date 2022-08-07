@@ -1,14 +1,12 @@
 .product-category {
-    padding: 5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     &-item {
         position: relative;
-        cursor: pointer;
-        width: 428px;
-        margin: 12px;
+        width: 375px;
+        margin: 60px 0px;
         cursor: pointer;
         &-bg {
             background-color: none;
