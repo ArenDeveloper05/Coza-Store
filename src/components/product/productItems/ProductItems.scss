@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     &-item {
+        transition: transform 0.9s ease;
         margin: 12px;
         width: 290px;
         padding: 4px;
@@ -29,7 +30,7 @@
             }
             &:hover button {
                 bottom: 8%;
-                transition: all .8s;
+                transition: all .6s;
             }
         }
         &-info {

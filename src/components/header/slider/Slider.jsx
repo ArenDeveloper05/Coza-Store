@@ -4,7 +4,7 @@ import {AiFillCaretLeft,AiFillCaretRight} from 'react-icons/ai'
 import item1 from '../../../assets/slider/slider1.webp'
 import item2 from '../../../assets/slider/slider2.webp'
 import item3 from '../../../assets/slider/slider3.webp'
-import BaseButton from "../../common/BaseButton/BaseButton"
+import BaseButton from "../../common/baseButton/BaseButton"
 
 const images = [item1, item2, item3]
 const Slider = () => {

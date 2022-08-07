@@ -1,6 +1,6 @@
 import "./Footer.scss"
 import {FaFacebookF,FaInstagram,FaPinterestP} from 'react-icons/fa'
-import BaseButton from "../common/BaseButton/BaseButton";
+import BaseButton from "../common/baseButton/BaseButton";
 
 
 const Footer = () => {

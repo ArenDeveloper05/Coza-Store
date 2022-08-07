@@ -1,18 +1,29 @@
 import { BsHeart } from "react-icons/bs"
 import { AiFillHeart } from "react-icons/ai"
 import { useState } from "react";
-import BaseButton from "../../../common/BaseButton/BaseButton";
+import BaseButton from "../../../common/baseButton/BaseButton";
 
-const ProductItem = ({ item }) => {
+const ProductItem = ({ item, setModalData, setIsModalOpen }) => {
   const [isOver, setIsOver] = useState(false);
-  const { modelName, price, isLiked, image } = item;
+  const { modelName, price, isLiked, image, modal } = item;
   const { src, alt } = image;
-  console.log(image);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    setModalData({
+        imageData: modal,
+        textData: {
+            price,
+            modelName
+        }
+    });
+  }
+
     return (
         <div className="product-items-item">
             <div className="product-items-item-image">
                 <img src={ src } alt={ alt } />
-                <BaseButton text="Quick View" />
+                <BaseButton func={openModal} text="Quick View" />
             </div>
             <div className="product-items-item-info">
                 <div className="row-line">

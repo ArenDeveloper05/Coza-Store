@@ -3,22 +3,26 @@ import WomenImage from "../assets/category/women.jpg"
 import MenImage from "../assets/category/man.jpg"
 import AccessoriesImage from "../assets/category/accessories.jpg"
 // Import Product Images.
-import ProductImage1 from "../assets/product/product-1.jpg"
-import ProductImage2 from "../assets/product/product-2.jpg"
-import ProductImage3 from "../assets/product/product-3.jpg"
-import ProductImage4 from "../assets/product/product-4.jpg"
-import ProductImage5 from "../assets/product/product-5.jpg"
-import ProductImage6 from "../assets/product/product-6.jpg"
-import ProductImage7 from "../assets/product/product-7.jpg"
-import ProductImage8 from "../assets/product/product-8.jpg"
-import ProductImage9 from "../assets/product/product-9.jpg"
-import ProductImage10 from "../assets/product/product-10.jpg"
-import ProductImage11 from "../assets/product/product-11.jpg"
-import ProductImage12 from "../assets/product/product-12.jpg"
-import ProductImage13 from "../assets/product/product-13.jpg"
-import ProductImage14 from "../assets/product/product-14.jpg"
-import ProductImage15 from "../assets/product/product-15.jpg"
-import ProductImage16 from "../assets/product/product-16.jpg"
+import ProductImage1 from "../assets/product/items/product-1.jpg"
+import ProductImage2 from "../assets/product/items/product-2.jpg"
+import ProductImage3 from "../assets/product/items/product-3.jpg"
+import ProductImage4 from "../assets/product/items/product-4.jpg"
+import ProductImage5 from "../assets/product/items/product-5.jpg"
+import ProductImage6 from "../assets/product/items/product-6.jpg"
+import ProductImage7 from "../assets/product/items/product-7.jpg"
+import ProductImage8 from "../assets/product/items/product-8.jpg"
+import ProductImage9 from "../assets/product/items/product-9.jpg"
+import ProductImage10 from "../assets/product/items/product-10.jpg"
+import ProductImage11 from "../assets/product/items/product-11.jpg"
+import ProductImage12 from "../assets/product/items/product-12.jpg"
+import ProductImage13 from "../assets/product/items/product-13.jpg"
+import ProductImage14 from "../assets/product/items/product-14.jpg"
+import ProductImage15 from "../assets/product/items/product-15.jpg"
+import ProductImage16 from "../assets/product/items/product-16.jpg"
+// Modal Images.
+import ProductModal1 from "../assets/product/modal/modal-1.webp"
+import ProductModal2 from "../assets/product/modal/modal-2.webp"
+import ProductModal3 from "../assets/product/modal/modal-3.webp"
 
 
 
@@ -95,6 +99,11 @@ export const productData = {
             image: {
                 src: ProductImage1,
                 alt: "Girl Shirt"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -106,6 +115,11 @@ export const productData = {
             image: {
                 src: ProductImage2,
                 alt: "Girl Supply"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -117,6 +131,11 @@ export const productData = {
             image: {
                 src: ProductImage3,
                 alt: "Men Trouser"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -128,6 +147,11 @@ export const productData = {
             image: {
                 src: ProductImage4,
                 alt: "Women Coat"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -139,6 +163,11 @@ export const productData = {
             image: {
                 src: ProductImage5,
                 alt: "Women Jumper"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -150,6 +179,11 @@ export const productData = {
             image: {
                 src: ProductImage6,
                 alt: "Watch"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -161,6 +195,11 @@ export const productData = {
             image: {
                 src: ProductImage7,
                 alt: "Shirt"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -172,6 +211,11 @@ export const productData = {
             image: {
                 src: ProductImage8,
                 alt: "Shirt"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -183,6 +227,11 @@ export const productData = {
             image: {
                 src: ProductImage9,
                 alt: "Shoes"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -194,6 +243,11 @@ export const productData = {
             image: {
                 src: ProductImage10,
                 alt: "Shirt Women"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -205,6 +259,11 @@ export const productData = {
             image: {
                 src: ProductImage11,
                 alt: "Supply"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -216,6 +275,11 @@ export const productData = {
             image: {
                 src: ProductImage12,
                 alt: "Belt"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -227,6 +291,11 @@ export const productData = {
             image: {
                 src: ProductImage13,
                 alt: "Shirt"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -238,6 +307,11 @@ export const productData = {
             image: {
                 src: ProductImage14,
                 alt: "Shirt"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -249,6 +323,11 @@ export const productData = {
             image: {
                 src: ProductImage15,
                 alt: "Watch"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         },
         {
@@ -260,6 +339,11 @@ export const productData = {
             image: {
                 src: ProductImage16,
                 alt: "Neck Back"
+            },
+            modal: {
+                image1: ProductModal1,
+                image2: ProductModal2,
+                image3: ProductModal3   
             }
         }
     ]

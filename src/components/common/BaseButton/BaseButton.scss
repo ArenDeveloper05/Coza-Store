@@ -1,5 +1,5 @@
 .base-button {
-    border: solid;
+    cursor: pointer;    
     border-radius: 20px;
     background-color: #fff;
     color: #000;
@@ -13,6 +13,6 @@
     &:hover {
         background-color: #000 !important;
         color: #fff;
-        transition: all 0.4s;
+        transition: all 0.2s;
     }
 }

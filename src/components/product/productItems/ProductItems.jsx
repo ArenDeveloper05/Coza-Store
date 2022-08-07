@@ -4,13 +4,12 @@ import ProductItem from "./productItem/ProductItem";
 import "./ProductItems.scss"
 
 const ProductItems = () => {
-  const { items } = useContext(ProductContext);
+  const { productItemsData, setModalData, setIsModalOpen } = useContext(ProductContext);
     return (
         <div className="product-items">
             {
-                items.map(item => {
-                    console.log(item);
-                    return <ProductItem key={ item.id } item={ item } />
+                productItemsData.map(item => {
+                    return <ProductItem key={ item.id } item={ item } setModalData={ setModalData } setIsModalOpen={ setIsModalOpen } />
                 })
             }
         </div>
