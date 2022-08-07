@@ -1,15 +1,14 @@
 import "./Product.scss"
-import { createContext, useContext, useState } from 'react'
+import { createContext, useState } from 'react'
 import ProductSelect from './productSelect/ProductSelect'
 import ProductItems from './productItems/ProductItems';
-import { HomeContext } from '../../pages/homePage/HomePage';
 import ProductModal from "./productModal/ProductModal";
 import BaseButton from "../common/baseButton/BaseButton";
+import { Link } from "react-router-dom"
 
 export const ProductContext = createContext();
 
-const Product = () => {
-  const { productData, productTitle } = useContext(HomeContext);
+const Product = ({ productData, productTitle, distanceStyle }) => {
   const [itemsData, setItemsData] = useState(productData.items);
   const [typesData, setTypesData] = useState(productData.types);
   const [modalData, setModalData] = useState({
@@ -46,11 +45,11 @@ const Product = () => {
 
     return (
         <ProductContext.Provider value={{ productItemsData: itemsData, productTypesData: typesData, sortItems, onChangeActive, setModalData, setIsModalOpen }}>
-            <div className='product'>
+            <div style={distanceStyle && distanceStyle} className='product'>
                 <h1 className='product-title'>{ productTitle && productTitle }</h1>
                 <ProductSelect />
                 <ProductItems />
-                <BaseButton text="Load More" />
+                <Link to="/Shop"><BaseButton text="Load More" /></Link>
                 { isModalOpen ? <ProductModal modalData={ modalData } /> : undefined}
             </div>
         </ProductContext.Provider>

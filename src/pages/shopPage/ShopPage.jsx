@@ -1,15 +1,20 @@
 import Layout from "../../components/layout/Layout"
+import Product from "../../components/product/Product"
+import { productData } from "../../data/productData"
+import { createContext } from "react"
+
+export const ShopContext = createContext();
 
 const ShopPage = () => {
   return (
     <Layout>
-        <main className="page-main">
-            <div className="page-main-wrapper">
-                <h1 style={{textAlign: "center", marginTop: "50%"}}>Your Content Should be here.</h1>
-            </div>
-        </main>
+      <main className="page-main">
+        <div className="page-main-wrapper">
+          <Product productData={ productData } distanceStyle={{marginTop: "10%"}} />
+        </div>
+      </main>
     </Layout>
-  )
+    )
 }
 
 export default ShopPage

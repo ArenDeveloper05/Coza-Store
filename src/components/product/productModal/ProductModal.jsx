@@ -12,8 +12,10 @@ import { RiFacebookFill, RiTwitterFill } from "react-icons/ri"
 import { FaGooglePlusG } from "react-icons/fa"
 import { TbMinusVertical } from "react-icons/tb"
 import { IoClose } from 'react-icons/io5'
+import { useState } from "react";
 
 const ProductModal = ({ modalData }) => {
+  const [currentImage, setCurrentImage] = useState('image1');
   const defaultDescr = "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat."
   const { imageData, textData } = modalData;
   const { price, modelName } = textData;
@@ -22,8 +24,8 @@ const ProductModal = ({ modalData }) => {
         <div className="product-modal">
             <div className="product-modal-container">
                 <div className="product-modal-container-images">
-                    <ProductModalSmall imageData={ imageData } />
-                    <ProductModalBig image={ { src: ProductImage1, alt: "Shirts " } }/>
+                    <ProductModalSmall imageData={ imageData } setCurrentImage={ setCurrentImage }/>
+                    <ProductModalBig image={ { src: imageData[currentImage], alt: "Shirts" } }/>
                 </div>
                 <div className="product-modal-container-info">
                     <ProductModalInfoTexts modelName={ modelName } price={ price } descr={ defaultDescr } />

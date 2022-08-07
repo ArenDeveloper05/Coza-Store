@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaExpandAlt } from "react-icons/fa" 
 
 const ProductModalBig = ({ image }) => {

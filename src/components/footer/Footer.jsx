@@ -1,7 +1,7 @@
 import "./Footer.scss"
 import {FaFacebookF,FaInstagram,FaPinterestP} from 'react-icons/fa'
 import BaseButton from "../common/baseButton/BaseButton";
-
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -39,7 +39,7 @@ const Footer = () => {
                     <div className="page-footer-wrapper-description-fourth footer-desc">
                         <h4 className="title-h4">NEWSLETTER</h4>
                         <input type="text"  placeholder="email@example.com" className="page-footer-wrapper-description-fourth-input"/>
-                        <BaseButton text={"SUBSCRIBE"} />
+                        <Link to="/"><BaseButton text={"SUBSCRIBE"} /></Link>
                     </div>
 
                 </section>
