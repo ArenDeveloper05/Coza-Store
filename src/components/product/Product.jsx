@@ -50,7 +50,7 @@ const Product = ({ productData, productTitle, distanceStyle }) => {
                 <ProductSelect />
                 <ProductItems />
                 <Link to="/Shop"><BaseButton text="Load More" /></Link>
-                { isModalOpen ? <ProductModal modalData={ modalData } /> : undefined}
+                { isModalOpen ? <ProductModal modalData={ modalData } setIsModalOpen={ setIsModalOpen } /> : undefined}
             </div>
         </ProductContext.Provider>
     )

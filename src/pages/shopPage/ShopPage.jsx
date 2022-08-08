@@ -3,8 +3,6 @@ import Product from "../../components/product/Product"
 import { productData } from "../../data/productData"
 import { createContext } from "react"
 
-export const ShopContext = createContext();
-
 const ShopPage = () => {
   return (
     <Layout>

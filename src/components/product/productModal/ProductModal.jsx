@@ -1,6 +1,5 @@
 import "./ProductModal.scss";
 import ProductModalBig from "./productModalImages/productModalBig/ProductModalBig";
-import ProductImage1 from "../../../assets/product/items/product-1.jpg"
 import ProductModalSmall from "./productModalImages/productModalSmall/ProductModalSmall";
 import ProductModalInfoTexts from "./productModalInfo/productModalInfoTexts/ProductModalInfoTexts";
 import ProductModalInfoSelects from "./productModalInfo/productModalInfoSelects/ProductModalInfoSelects";
@@ -14,7 +13,7 @@ import { TbMinusVertical } from "react-icons/tb"
 import { IoClose } from 'react-icons/io5'
 import { useState } from "react";
 
-const ProductModal = ({ modalData }) => {
+const ProductModal = ({ modalData, setIsModalOpen }) => {
   const [currentImage, setCurrentImage] = useState('image1');
   const defaultDescr = "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat."
   const { imageData, textData } = modalData;
@@ -42,7 +41,7 @@ const ProductModal = ({ modalData }) => {
                         <i><FaGooglePlusG /></i>
                     </div>
                 </div>
-                <div className="product-modal-container-close">
+                <div onClick={() => setIsModalOpen(false)} className="product-modal-container-close">
                     <IoClose />
                 </div>
             </div>

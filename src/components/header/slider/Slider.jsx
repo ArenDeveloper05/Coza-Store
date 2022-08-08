@@ -5,6 +5,7 @@ import item1 from '../../../assets/slider/slider1.webp'
 import item2 from '../../../assets/slider/slider2.webp'
 import item3 from '../../../assets/slider/slider3.webp'
 import BaseButton from "../../common/baseButton/BaseButton"
+import { Link } from "react-router-dom"
 
 const images = [item1, item2, item3]
 const Slider = () => {
@@ -35,13 +36,13 @@ const Slider = () => {
             <img src={images[count]} alt="imaage" />
             {count===0 && <h1 className='new-season left-pos'>New Season</h1>}
             {count===0 && <p className='women-collection left-pos'>Women Collection</p>}
-            {count===0 && <a href="https://fonts.google.com/?preview.size=36"><BaseButton text={ buttonCont } /></a> }
+            {count===0 && <Link to="/Shop"><BaseButton text={ buttonCont } /></Link> }
             {count===1 && <h1 className='new-arrivals left-pos'>New Arrivals</h1>}
             {count===1 && <p className='men-collection left-pos'>Men Collection</p>}
-            {count===1 && <a href='https://fonts.google.com/?preview.size=36'><BaseButton text={ buttonCont } /></a>}
+            {count===1 && <Link to="/Shop"><BaseButton text={ buttonCont } /></Link>}
             {count===2 && <p className='men-new-season left-pos'>Men New-Season</p>}
             {count===2 && <h1 className='jackets left-pos'>Jackkets & Coats</h1>}
-            {count===2 && <a href='https://preview.colorlib.com/theme/cozastore/index.html'><BaseButton text={ buttonCont } /></a>}
+            {count===2 && <Link to="/Shop"><BaseButton text={ buttonCont } /></Link>}
             <AiFillCaretLeft className='slider-left' onClick={goLeft}/>
             <AiFillCaretRight className='slider-right' onClick={goRight}/>
         </div>

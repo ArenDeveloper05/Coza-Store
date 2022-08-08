@@ -2,21 +2,18 @@ import Slider from "../../components/header/slider/Slider";
 import Layout from "../../components/layout/Layout";
 import ProductCategory from "../../components/productCategory/ProductCategory";
 import { productCategoryData, productData } from "../../data/productData";
-import { createContext } from "react";
 import Product from "../../components/product/Product";
-
-export const PageContext = createContext();
 
 const HomePage = () => {
     return (
         <Layout>
-                <main className="page-main">
-                    <Slider/>
-                    <div className="page-main-wrapper">
-                        <ProductCategory productCategoryData={ productCategoryData } />
-                        <Product productData={ productData } productTitle="PRODUCT OVERVIEW" />
-                    </div>
-                </main>
+            <main className="page-main">
+                <Slider/>
+                <div className="page-main-wrapper">
+                    <ProductCategory productCategoryData={ productCategoryData } />
+                    <Product productData={ productData } productTitle="PRODUCT OVERVIEW" />
+                </div>
+            </main>
         </Layout>
     )
 }

@@ -1,11 +1,15 @@
 .product-modal {
-    border: solid;
+    left: 0;
     width: 100%;
     position: relative;
     height: 100%;
     padding-top: 50px;
     &-container {
-        top: 0;
+        width: 1380px;
+        z-index: 200;
+        top: 8%;
+        position: fixed;
+        left: 14%;
         background-color: #fff;
         padding: 2rem;
         min-height: 800px;
@@ -123,8 +127,9 @@
         &-close {
             position: absolute;
             top: 0;
-            right: 0;
-            font-size: 24px;
+            right: .5%;
+            cursor: pointer;
+            font-size: 28px;
         }
     }
 }
