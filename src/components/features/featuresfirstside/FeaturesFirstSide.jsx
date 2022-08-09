@@ -60,7 +60,7 @@ const FeaturesFirstSide = () => {
       </table>
       <div className='features-wrapper-first-side-table-functional'>
         <input type="text" placeholder='Coupon Code'/>
-        <BaseButton text={"APPLY COUPON"}/>
+        <BaseButton text={"APPLY COUPON"} />
         <BaseButton text={"UPDATE CARD"}/>
       </div>
     </section>

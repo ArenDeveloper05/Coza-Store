@@ -3,7 +3,6 @@
     width: 1300px;
     display: flex;
     justify-content: space-between;
-
     &-first-side{
         padding-left: 85px;
         padding-top: 110px;
@@ -59,6 +58,7 @@
                 padding: 10px 30px;
                 border-radius: 20px;
                 border: 1px solid rgb(213, 210, 210);
+                outline: none;
             }
             .base-button{
                 width: 160px;
@@ -92,6 +92,7 @@
             border: 1px solid rgb(213, 210, 210);
             background-color: #000;
         }   
+
         .card-totals{
             border: 1px solid rgb(213, 210, 210);
             margin-top: 95px;
@@ -111,6 +112,9 @@
                 border-bottom: 0.5px dashed #555;
                 padding-top: 15px;
                 &-desc {
+                    select{
+                        font-weight: 600;
+                    }
                     .base-button{
                         width: 170px;
                         min-height: 45px;
@@ -122,12 +126,12 @@
                         border: 1px solid rgb(213, 210, 210);
                         background-color: #e6e6e6;
                         margin: 20px 0;
-                    
                     }
                 }
             }
             &-total{
                 display: flex;
+                
             }
             
         }
@@ -186,6 +190,7 @@
     margin: 10px 0px;
     text-indent: 8px;
     font-weight: 600;
+    outline: none;
 }
 .pr{
     padding-right: 30px;
@@ -193,4 +198,9 @@
 
 .pr-100{
     padding-right: 160px;
+}
+
+.base-button:hover {
+    background-color: #717fe0 !important;
+    color: #fff !important;
 }
