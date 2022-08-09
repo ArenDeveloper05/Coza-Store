@@ -1,8 +1,8 @@
 import "./BaseSelectMenu.scss"
 
-function BaseSelectButton({ Icon, text }) {
+function BaseSelectButton({ Icon, text, dropFunc, styles }) {
   return (
-    <div className='base-select-menu'>
+    <div style={ styles } onClick={dropFunc} className='base-select-menu'>
         { Icon && <i><Icon /></i> }
         <p>{ text && text }</p>
     </div>

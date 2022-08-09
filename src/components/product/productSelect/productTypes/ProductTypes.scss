@@ -11,12 +11,12 @@
         margin: 4px;
         cursor: pointer;
         height: 24px;
+        transition: all .4s;
     }
     &-item:hover {
         border-bottom: 1px solid #888;
         color: #000;
-        transition: all 0.4s;
-        transition: ease-in-out;
+        transition: ease-in;
     }
     .active {
         border-bottom: 1px solid #888;

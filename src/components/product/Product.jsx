@@ -5,6 +5,7 @@ import ProductItems from './productItems/ProductItems';
 import ProductModal from "./productModal/ProductModal";
 import BaseButton from "../common/baseButton/BaseButton";
 import { Link } from "react-router-dom"
+import ProductSearchDrop from "./productDrops/productSearchDrop/ProductSearchDrop";
 
 export const ProductContext = createContext();
 
@@ -16,6 +17,7 @@ const Product = ({ productData, productTitle, distanceStyle }) => {
     textData: null
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSearchDropOpen, setIsSearchDropOpen] = useState(false);
 
   const sortItems = (type) => {
     setItemsData(() => {
@@ -44,10 +46,11 @@ const Product = ({ productData, productTitle, distanceStyle }) => {
   }
 
     return (
-        <ProductContext.Provider value={{ productItemsData: itemsData, productTypesData: typesData, sortItems, onChangeActive, setModalData, setIsModalOpen }}>
+        <ProductContext.Provider value={{ productItemsData: itemsData, productTypesData: typesData, sortItems, onChangeActive, setModalData, setIsModalOpen, setIsSearchDropOpen, isSearchDropOpen }}>
             <div style={distanceStyle && distanceStyle} className='product'>
                 <h1 className='product-title'>{ productTitle && productTitle }</h1>
                 <ProductSelect />
+                { isSearchDropOpen && <ProductSearchDrop /> }
                 <ProductItems />
                 <Link to="/Shop"><BaseButton text="Load More" /></Link>
                 { isModalOpen ? <ProductModal modalData={ modalData } setIsModalOpen={ setIsModalOpen } /> : undefined}
