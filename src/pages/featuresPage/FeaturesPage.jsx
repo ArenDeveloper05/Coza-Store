@@ -1,11 +1,12 @@
+import Features from "../../components/features/Features"
 import Layout from "../../components/layout/Layout"
 
 const FeaturesPage = () => {
   return (
     <Layout>
             <main className="page-main">
-                <div className="page-main-wrapper">
-                    <h1 style={{textAlign: "center", marginTop: "50%"}}>Your Content Should be here.</h1>
+                <div className="page-main-wrapper ">
+                  <Features/>
                 </div>
             </main>
     </Layout>
