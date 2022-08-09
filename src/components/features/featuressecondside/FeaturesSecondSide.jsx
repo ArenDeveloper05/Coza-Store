@@ -15,11 +15,13 @@ const FeaturesSecondSide = () => {
               <div className="card-totals-shipping-desc  ml-features">
                 <p> There are no shipping methods available. Please double check your address, or contact us if you need any help.</p>
                 <p className='mt-mb'>CALCULATE SHIPPING</p>
-                <select name="country" >
-                  <option value="select">Select a country...</option>
-                  <option value="usa">USA</option>
-                  <option value="uk">UK</option>
-                </select>
+                <div className='card-totals-shipping-desc-select-container'>
+                  <select name="country" >
+                    <option value="select">Select a country...</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                  </select>
+                </div>
                 <input type="text"placeholder='State/ country'className='input-features'/>
                 <input type="text"placeholder='Postcode/ Zip' className='input-features' />
                 <BaseButton text={"UPDATE TOTALS"}/>

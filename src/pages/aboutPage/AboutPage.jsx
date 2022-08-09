@@ -1,6 +1,6 @@
 import Layout from "../../components/layout/Layout"
 import BaseTitleImage from "../../components/common/baseTitleImage/BaseTitleImage"
-import PageBg from "../../assets/pageBackgroundImages/about-contact-page.webp"
+import PageBg from "../../assets/pageBackgroundImages/contact-page.webp"
 import AboutInfo from "../../components/about/aboutInfo/AboutInfo"
 
 const AboutPage = () => {

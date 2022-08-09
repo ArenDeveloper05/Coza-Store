@@ -105,16 +105,13 @@
             &-subtotal{
                 border-bottom: 0.5px dashed #555;
                 display: flex;
-                
+                align-items: center;
             }
             &-shipping{
                 display: flex;
                 border-bottom: 0.5px dashed #555;
                 padding-top: 15px;
                 &-desc {
-                    select{
-                        font-weight: 600;
-                    }
                     .base-button{
                         width: 170px;
                         min-height: 45px;
@@ -126,6 +123,28 @@
                         border: 1px solid rgb(213, 210, 210);
                         background-color: #e6e6e6;
                         margin: 20px 0;
+                    }
+                    &-select-container {
+                        border: solid 1px #ccc;
+                        width: 160px;
+                        display: flex;
+                        align-items: center;
+                        height: 28px;
+                        > select {
+                            height: 100%;
+                            font-weight: 600;
+                            border-radius: 4px;
+                            width: 120px;
+                            color: #444;
+                            padding-left: 6px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+
+                            > option {
+                                font-weight: 600;
+                            }
+                        }
                     }
                 }
             }
@@ -191,6 +210,7 @@
     text-indent: 8px;
     font-weight: 600;
     outline: none;
+    border: solid 1px #ccc;
 }
 .pr{
     padding-right: 30px;
