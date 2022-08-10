@@ -1,11 +1,9 @@
 import { BsHeart } from "react-icons/bs"
 import { AiFillHeart } from "react-icons/ai"
-import { useState } from "react";
 import BaseButton from "../../../common/baseButton/BaseButton";
 
-const ProductItem = ({ item, setModalData, setIsModalOpen }) => {
-  const [isOver, setIsOver] = useState(false);
-  const { modelName, price, isLiked, image, modal } = item;
+const ProductItem = ({ item, setModalData, setIsModalOpen, likedItem }) => {
+  const { modelName, price, isLiked, image, modal, id } = item;
   const { src, alt } = image;
 
   const openModal = () => {
@@ -18,7 +16,6 @@ const ProductItem = ({ item, setModalData, setIsModalOpen }) => {
         }
     });
   }
-
     return (
         <div className="product-items-item">
             <div className="product-items-item-image">
@@ -28,7 +25,7 @@ const ProductItem = ({ item, setModalData, setIsModalOpen }) => {
             <div className="product-items-item-info">
                 <div className="row-line">
                     <h4>{ modelName }</h4>
-                    <i onMouseLeave={() => setIsOver(false)} onMouseOver={() => setIsOver(true)}>{ isOver ? <AiFillHeart /> : <BsHeart />}</i>
+                    <i onClick={ () => likedItem(id) } className={`${ isLiked ? "like" : "dislike" }`}> { isLiked ?  <AiFillHeart /> : <BsHeart /> }</i>
                 </div>
                 <p>{ price }</p>
             </div>            

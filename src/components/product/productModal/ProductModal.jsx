@@ -11,13 +11,26 @@ import { RiFacebookFill, RiTwitterFill } from "react-icons/ri"
 import { FaGooglePlusG } from "react-icons/fa"
 import { TbMinusVertical } from "react-icons/tb"
 import { IoClose } from 'react-icons/io5'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ProductModal = ({ modalData, setIsModalOpen }) => {
   const [currentImage, setCurrentImage] = useState('image1');
   const defaultDescr = "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat."
   const { imageData, textData } = modalData;
   const { price, modelName } = textData;
+
+  useEffect(() => {
+    const closeModal = (e) => {
+        if (e.key === "Escape") {
+            setIsModalOpen(false);
+        }
+    }
+    window.addEventListener("keydown", closeModal);    
+    
+    return () => {
+        window.removeEventListener("keydown", closeModal)
+    }
+  });
 
     return (
         <div className="product-modal">

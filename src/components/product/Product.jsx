@@ -1,5 +1,5 @@
 import "./Product.scss"
-import { createContext, useState } from 'react'
+import { createContext, useState, memo, useCallback } from 'react'
 import ProductSelect from './productSelect/ProductSelect'
 import ProductItems from './productItems/ProductItems';
 import ProductModal from "./productModal/ProductModal";
@@ -9,7 +9,7 @@ import ProductSearchDrop from "./productDrops/productSearchDrop/ProductSearchDro
 
 export const ProductContext = createContext();
 
-const Product = ({ productData, productTitle, distanceStyle }) => {
+const Product = memo(({ productData, productTitle, distanceStyle }) => {
   const [itemsData, setItemsData] = useState(productData.items);
   const [typesData, setTypesData] = useState(productData.types);
   const [modalData, setModalData] = useState({
@@ -18,20 +18,26 @@ const Product = ({ productData, productTitle, distanceStyle }) => {
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSearchDropOpen, setIsSearchDropOpen] = useState(false);
+  const [currentType, setCurrentType] = useState("all products");
 
-  const sortItems = (type) => {
+  const getCurrentTypeData = useCallback((checkItem) => {
+    return productData.items.filter(item => {
+        if (checkItem === "all products") {
+            return productData.types;
+        } else {
+            return item.type === checkItem;
+        }
+    })
+  }, [productData]);
+
+  const sortItems = useCallback((type) => {
+    setCurrentType(type);
     setItemsData(() => {
-        return productData.items.filter(item => {
-            if (type === "all products") {
-                return productData.types;
-            } else {
-                return item.type === type;
-            }
-        })
+        return getCurrentTypeData(type)
     });
-  }
+  }, [getCurrentTypeData]);
 
-  const onChangeActive = (id) => {
+  const onChangeActive = useCallback((id) => {
     setTypesData(() => {
         return productData.types.map(item => {
             if (item.id === id) {
@@ -43,10 +49,30 @@ const Product = ({ productData, productTitle, distanceStyle }) => {
             return item;
         })
     })
-  }
+  }, [productData]);
+
+
+  const searchItems = useCallback((searchedText) => {
+    setItemsData(() => {
+        const itemsData = getCurrentTypeData(currentType);
+        return itemsData.filter(item => item.modelName.toLowerCase().includes(searchedText.toLowerCase()));
+    })
+  }, [currentType, getCurrentTypeData]);
+
+  const likedItem = useCallback((id) => {
+    setItemsData(prev => {
+        return prev.filter(item => {
+            if (item.id === id) {
+                return item.isLiked = true
+            } else {
+                return item;
+            }
+        })
+    })
+  }, []);
 
     return (
-        <ProductContext.Provider value={{ productItemsData: itemsData, productTypesData: typesData, sortItems, onChangeActive, setModalData, setIsModalOpen, setIsSearchDropOpen, isSearchDropOpen }}>
+        <ProductContext.Provider value={{ productItemsData: itemsData, productTypesData: typesData, sortItems, onChangeActive, setModalData, setIsModalOpen, setIsSearchDropOpen, isSearchDropOpen, searchItems, likedItem }}>
             <div style={distanceStyle && distanceStyle} className='product'>
                 <h1 className='product-title'>{ productTitle && productTitle }</h1>
                 <ProductSelect />
@@ -57,6 +83,6 @@ const Product = ({ productData, productTitle, distanceStyle }) => {
             </div>
         </ProductContext.Provider>
     )
-}
+})
 
 export default Product
