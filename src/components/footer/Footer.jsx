@@ -39,6 +39,7 @@ const Footer = () => {
                     <div className="page-footer-wrapper-description-fourth footer-desc">
                         <h4 className="title-h4">NEWSLETTER</h4>
                         <input type="text"  placeholder="email@example.com" className="page-footer-wrapper-description-fourth-input"/>
+                        <div className="for-before"></div>
                         <Link to="/"><BaseButton text={"SUBSCRIBE"} /></Link>
                     </div>
 
