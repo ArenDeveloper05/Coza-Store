@@ -142,7 +142,7 @@ export const productData = {
             id: 4,
             type: "women",
             price: "$75.00",
-            isLiked: false,
+            isLiked: true,
             modelName: "Classic Trench Coat",
             image: {
                 src: ProductImage4,
