@@ -82,24 +82,23 @@
                     color: white;
                     cursor: pointer;
                 }
-                .base-button::after{
+                .base-button:hover{
+                    background-color:white !important;
+                    color: #717fe0;;
+                }
+                .for-before::before{
                     content: "";
                         position: absolute;
-                        width: 0px;
-                        top: 91px;
+                        width: 0;
+                        top: 86px;
                         left: 60px;
                         border-bottom: 3px solid #717fe0;
                         right: 10px;   
                         transition: 0.4s;
                 }
-                .base-button:hover{
-                    background-color:white !important;
-                    color: #717fe0;;
+                &-input:focus+ .for-before:before{
+                    width: 265px;
                 }
-            }
-
-            &-fourth .page-footer-wrapper-description-fourth-input:focus+.base-button::after {
-                width: 265px;
             }
         }
         
