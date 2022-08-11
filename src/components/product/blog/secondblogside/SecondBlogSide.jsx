@@ -9,7 +9,6 @@ const SecondBlogSide = ({blogData,setBlogs,featured,setFeatured,inputValue,setin
         return blog.title.includes(inputValue) 
     })) 
    
-    
   }
   return (
     <div className='blog-second-side'>
